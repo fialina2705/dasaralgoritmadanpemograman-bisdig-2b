@@ -1,0 +1,122 @@
+STUDI KASUS
+
+# Fungsi rekursif menghitung faktorial
+def hitung_faktorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * hitung_faktorial(n - 1)
+
+# Input dari user
+angka = int(input("Masukkan angka untuk dihitung faktorialnya: "))
+
+# Validasi input
+if angka < 0:
+    print("Faktorial tidak bisa dihitung untuk angka negatif.")
+else:
+    hasil = hitung_faktorial(angka)
+    print(f"Faktorial dari {angka} adalah {hasil}")
+
+     
+
+Masukkan angka untuk dihitung faktorialnya: 5
+Faktorial dari 5 adalah 120
+
+
+# List untuk menyimpan nilai-nilai siswa
+nilai_siswa = []
+
+# Input nilai untuk 5 siswa
+for i in range(5):
+    nilai = float(input(f"Masukkan nilai siswa ke-{i+1}: "))
+    nilai_siswa.append(nilai)
+
+# Cari nilai tertinggi dan posisi siswanya
+nilai_tertinggi = max(nilai_siswa)
+siswa_tertinggi = nilai_siswa.index(nilai_tertinggi) + 1  # +1 karena index mulai dari 0
+
+# Tampilkan hasil
+print("\n=== Hasil ===")
+print("Daftar nilai siswa:", nilai_siswa)
+print(f"Nilai tertinggi adalah {nilai_tertinggi}, didapat oleh siswa ke-{siswa_tertinggi}.")
+
+     
+
+Masukkan nilai siswa ke-1: 90
+Masukkan nilai siswa ke-2: 78
+Masukkan nilai siswa ke-3: 85
+Masukkan nilai siswa ke-4: 92
+Masukkan nilai siswa ke-5: 88
+
+=== Hasil ===
+Daftar nilai siswa: [90.0, 78.0, 85.0, 92.0, 88.0]
+Nilai tertinggi adalah 92.0, didapat oleh siswa ke-4.
+
+
+# Input total belanja
+total_belanja = float(input("Masukkan total belanja: Rp "))
+
+# Cek apakah dapat diskon
+if total_belanja > 500000:
+    diskon = 0.10 * total_belanja
+    total_bayar = total_belanja - diskon
+    print(f"Selamat! Anda mendapatkan diskon 10% sebesar Rp {diskon:.0f}")
+else:
+    diskon = 0
+    total_bayar = total_belanja
+    print("Maaf, tidak ada diskon.")
+
+# Tampilkan total yang harus dibayar
+print(f"Total yang harus dibayar: Rp {total_bayar:.0f}")
+
+     
+
+Masukkan total belanja: Rp 650000
+Selamat! Anda mendapatkan diskon 10% sebesar Rp 65000
+Total yang harus dibayar: Rp 585000
+
+
+# Input harga barang
+barang1 = float(input("Masukkan harga barang 1: Rp "))
+barang2 = float(input("Masukkan harga barang 2: Rp "))
+barang3 = float(input("Masukkan harga barang 3: Rp "))
+
+# Hitung total
+total = barang1 + barang2 + barang3
+
+# Tampilkan hasil
+print("Total yang harus dibayar: Rp", total)
+
+     
+
+Masukkan harga barang 1: Rp 100000
+Masukkan harga barang 2: Rp 150000
+Masukkan harga barang 3: Rp 50000
+Total yang harus dibayar: Rp 300000.0
+
+
+# Input nilai dari 3 mata pelajaran
+nilai1 = float(input("Masukkan nilai pertama: "))
+nilai2 = float(input("Masukkan nilai kedua: "))
+nilai3 = float(input("Masukkan nilai ketiga: "))
+
+# Hitung rata-rata
+rata_rata = (nilai1 + nilai2 + nilai3) / 3
+
+# Tampilkan hasil rata-rata
+print("Rata-rata nilai:", rata_rata)
+
+# Cek kelulusan
+if rata_rata >= 75:
+    print("Status: Lulus 🎉")
+else:
+    print("Status: Tidak Lulus 😢")
+
+     
+
+Masukkan nilai pertama: 80
+Masukkan nilai kedua: 70
+Masukkan nilai ketiga: 75
+Rata-rata nilai: 75.0
+Status: Lulus 🎉
+
